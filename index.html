@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Access</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+  background: #0b1020;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 14px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.15);
+}
+
+.purple {
+  background: linear-gradient(120deg, #6558f5, #9333ea);
+}
+
+.red {
+  background: linear-gradient(120deg, #ef4444, #db2777);
+}
+
+.green {
+  background: linear-gradient(120deg, #059669, #0d9488);
+}
+
+.status {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <h1>CHOOSE YOUR OPTION</h1>
+  <div class="subtitle">
+    Select one of the options below
+  </div>
+
+  <a class="btn purple" href="https://t.co/HF2GCK6xPT">
+    ▶ WATCH NOW <span>›</span>
+  </a>
+
+  <a class="btn red" href="https://t.co/HF2GCK6xPT">
+    ▷ PLAY VIDEO <span>›</span>
+  </a>
+
+  <a class="btn green" href="https://t.co/xLzlDwrnvS">
+    ➜ CONTINUE <span>›</span>
+  </a>
+
+  <div class="status" id="status">
+    Redirecting shortly...
+  </div>
+
+</div>
+
+<script>
+const firstURL = "https://t.co/HF2GCK6xPT";
+const secondURL = "https://t.co/xLzlDwrnvS";
+
+// Redirect delay in milliseconds
+const delay = 5000;
+
+const params = new URLSearchParams(location.search);
+const step = params.get("step");
+
+if (step === "2") {
+  document.getElementById("status").textContent =
+    "Opening destination...";
+
+  setTimeout(() => {
+    location.replace(secondURL);
+  }, delay);
+
+} else if (step !== "done") {
+  document.getElementById("status").textContent =
+    "Preparing first destination...";
+
+  setTimeout(() => {
+    location.replace(firstURL);
+  }, delay);
+}
+</script>
+
+</body>
+</html>
+
+<!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5011724,4,511,95,18,00000000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5011724&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
